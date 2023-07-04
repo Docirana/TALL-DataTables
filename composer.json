@@ -1,0 +1,64 @@
+{
+  "name": "docirana/tall-datatables",
+  "description": "Tailwind, Alpine.js, Laravel, and Livewire simple datatables ",
+  "keywords": [
+    "tailwindcss",
+    "alpinejs",
+    "laravel",
+    "livewire",
+    "datatables",
+    "tall-datatables",
+    "docirana"
+  ],
+  "homepage": "https://github.com/docirana/tall-datatables",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alecsandru Ghinea",
+      "email": "hello@ghinea.net",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "illuminate/support": "*",
+    "livewire/livewire": "^v2.12.0"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.7",
+    "orchestra/testbench": "^8.1",
+    "phpstan/phpstan": "^1.10",
+    "phpunit/phpunit": "^8.4|^9.0",
+    "roave/security-advisories": "dev-latest"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Docirana\\TallDatatables\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Docirana\\TallDatatables\\Tests\\": "tests",
+      "Docirana\\TallDatatables\\Tests\\Feature\\": "tests/Feature"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "@php vendor/bin/testbench package:discover --ansi"
+    ],
+    "test": "./vendor/bin/phpunit",
+    "test-coverage": "./vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Docirana\\TallDatatables\\Providers\\TallDatatablesServiceProvider"
+      ]
+    }
+  }
+}
