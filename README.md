@@ -54,14 +54,6 @@ use Illuminate\Support\Collection;
 
 class ExampleComponent extends TallDatatables
 {
-    public function render()
-    {
-        return view('livewire.example-component', [
-            'headerData' => $this->headerData(),
-            'data' => $this->data(),
-        ]);
-    }
-
     public function headerData(): Collection
     {
         // TODO: Implement headerData() method.
